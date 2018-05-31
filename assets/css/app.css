@@ -4,3 +4,19 @@ html,body{
 .is-info{
   background: black !important;
 }
+
+
+
+.skill-list{
+  border-bottom:1px solid;
+  margin-bottom:15px;
+}
+
+.skill-item{
+  font-size:60px;
+}
+@media only screen and (min-width: 768px) {
+  .skill-item{
+    font-size:10px;
+  }
+}

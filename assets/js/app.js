@@ -36,7 +36,6 @@ Vue.component('app-header',{
     </section>
     `
 })
-
 Vue.component('app-skills',{
     template:`
     <div>
@@ -81,7 +80,6 @@ Vue.component('app-skills',{
         }
     }
 })
-
 Vue.component('app-experience',{
     template:`
     <div>
@@ -107,7 +105,6 @@ Vue.component('app-experience',{
         }
     }
 })
-
 Vue.component('app-ides',{
     template:`
     <div>
@@ -133,7 +130,6 @@ Vue.component('app-ides',{
         }
     }
 })
-
 Vue.component('app-demos',{
     template:`
     <div>
@@ -166,17 +162,21 @@ Vue.component('app-demos',{
         }
     }
 })
-
-
 Vue.component('app-knowledge',{
     template:`
     <div>
      <ul>
-       <li v-for="knowledge in knowledges">
-         {{ knowledge.name }}
-         <span v-for="lev in knowledge.level">
-          <i class="fa fa-square-o"></i>
-         </span>
+       <li v-for="knowledge in knowledges" class="skill-list">
+         <div class="columns">
+          <div class="column">{{ knowledge.name }}
+          <div style="font-size:10px">{{ knowledge.level }}/10</div>
+          </div>
+          <div class="column">
+            <span v-for="lev in knowledge.level" class="skill-item">
+             <i class="fa fa-square-o"></i>
+            </span>
+          </div>
+         </div>
        </li>
      </ul>
     </div>
@@ -189,28 +189,27 @@ Vue.component('app-knowledge',{
     data:function(){
         return {
           knowledges:[
-              {name:"Android",level:3},
-              {name:"JSON",level:3},
-              {name:"HTML5",level:3},
-              {name:"Javascript",level:3},
-              {name:"PHP",level:3},
-              {name:"Python",level:3},
-              {name:"Node.js",level:3},
-              {name:"Apache",level:3},
-              {name:"MongoDB",level:3},
-              {name:"Laravel",level:3},
-              {name:"Wordpress",level:3},
-              {name:"Linux",level:3},
-              {name:"Arduino",level:3},
-              {name:"jQuery",level:3},
-              {name:"XML",level:3},
-              {name:"Github",level:3},
-              {name:"MySQL",level:3},
-              {name:"Google API",level:3},
-              {name:"Phaser.js",level:3},
+              {name:"Android",level:5},
+              {name:"JSON",level:9},
+              {name:"HTML5",level:9},
+              {name:"Javascript",level:9},
+              {name:"PHP",level:8},
+              {name:"Python",level:6},
+              {name:"Node.js",level:6},
+              {name:"Apache",level:7},
+              {name:"MongoDB",level:5},
+              {name:"Laravel",level:7},
+              {name:"Wordpress",level:6},
+              {name:"Linux",level:9},
+              {name:"Arduino",level:8},
+              {name:"jQuery",level:9},
+              {name:"XML",level:6},
+              {name:"Github",level:4},
+              {name:"MySQL",level:6},
+              {name:"Google API",level:5},
+              {name:"Phaser.js",level:7},
               {name:"Unity",level:3},
-              {name:"Moodle",level:3},
-              {name:"Github",level:3}
+              {name:"Moodle",level:4},
           ],
         }
     }
@@ -251,8 +250,7 @@ Vue.component('app-frameworks',{
     <div>
      <p v-for="lang in languages">
          {{ lang.name }}
-       <//>
-     </ul>
+     </p>
     </div>
     `,
     created:function(){
@@ -275,15 +273,15 @@ Vue.component('app-frameworks',{
 Vue.component('app-jobs',{
     template:`
     <div>
-    <div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <p class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-    </p>
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <p class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+          </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
       <div class="box" v-for="job in jobs">
         <article class="media">
           <div class="media-content">
@@ -318,9 +316,9 @@ Vue.component('app-jobs',{
     data:function(){
         return {
           jobs:[
-            {name:"MaryPastel",url:"",client:"",date:"2017",description:"",tags:["Android","iOS","Laravel"]},
-            {name:"Staiger App",url:"",client:"",client:"",date:"2017",description:"",tags:["Android","iOS"]},
-            {name:"Maintenance System",url:"",client:"",date:"2017",description:"",tags:["Laravel"]},
+            {name:"MaryPastel",url:"http://marypastel.com.ve",client:"",date:"2017",description:"Development Site, Shopping Cart and shopping and recipes system",tags:["Android","iOS","Laravel"]},
+            {name:"Staiger App",url:"",client:"https://play.google.com/store/apps/details?id=com.appmobile.staigerappsn",client:"Real State App",date:"2017",description:"",tags:["Android","iOS"]},
+            {name:"Maintenance System",url:"",client:"",date:"2017",description:"Sistema de mantenimiento para llevar el control de materiales y procesos",tags:["Laravel"]},
             {name:"iDrink",url:"",client:"",date:"2015",description:"",tags:["Android"]},
             {name:"Car simulator",url:"",client:"",date:"2014",description:"",tags:["Panda3D","Game"]},
             {name:"Braile Printer",url:"",client:"",date:"2013",description:"",tags:["Python","C"]},
@@ -357,7 +355,6 @@ Vue.component('app-portfolio',{
         }
     }
 })
-
 Vue.component('app-github',{
     template:`
     <div>
