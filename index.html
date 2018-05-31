@@ -1,33 +1,111 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Iapetod - Developer</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Developer | Jesus Marcano</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
     <div id="app">
-      <div>{{ message }}</div>
-      <div>
-        Jesus Marcano
-        Fullstack Developer
-      </div>
-      <div>
-        Sintesis de competencias
-      </div>
-      <div>Herramientas de desarrollo</div>
-      <div>Experiencia profesional</div>
-      <div>Formacion complementaria</div>
-      <div>Lenguajes de programacion</div>
-      <div>Idiomas</div>
+      <section class="section">
+        <div class="container">
+          <div class="columns is-gapless" style="background:silver">
+            <div class="column is-one-quarter">
+              <img src="profile-img.jpg" alt="">
+              <pre>{{ $data.header }}</pre>
+              <div class="column">
+                <div class="notification is-info is-portfolio">
+                  <p><i class="fa fa-cogs"></i> Experience</p>
+                  <app-experience></app-experience>
+                </div>
+              </div>
+              <div class="column">
+                <div class="notification is-info is-portfolio">
+                  <p><i class="fa fa-cubes"></i> Knowledge</p>
+                  <app-knowledge></app-knowledge>
+                </div>
+              </div>
+            </div>
+            <div class="column is-three-quarters ">
+              <div class="column notification">
+                  <div class="columns">
+                    <div class="column is-three-quarters">
+                      <h1 class="title center">Jesus Marcano</h1>
+                      <h1 class="subtitle">Software Developer</h1>
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column">
+                      <div class="notification is-info is-portfolio">
+                        <p><i class="fa fa-superpowers"></i> Skills</p>
+                        <app-skills></app-skills>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="columns">
+                    <div class="column is-half">
+                      <div class="notification is-info">
+                        <p>Supported languages</p>
+
+                        <h3 class="subtitle"><i class="fa fa-language"></i> Human</h3>
+                        <span v-for="lang in lang.human">
+                          <i class="is-primary">{{ lang }}</i> /
+                        </span>
+                        <hr>
+                        <h3 class="subtitle"><i class="fa fa-code"></i> Programming</h3>
+                        <app-languages></app-languages>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="notification is-info">
+                        <p><i class="fa fa-gear"></i> Frameworks</p>
+                        <app-frameworks></app-frameworks>
+                      </div>
+                      <div class="notification is-info">
+                        <p><i class="fa fa-desktop"></i> IDE</p>
+                        <app-ides></app-ides>
+                      </div>
+                    </div>
+                    <div class="column">
+
+                      <div class="notification is-info">
+                        <p><i class="fa fa-download"></i> Downloads Demo</p>
+                        <app-demos></app-demos>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column">
+                        <div class="notification is-info">
+                          <p><i class="fa fa-github"></i> Github Projects</p>
+                          <app-github></app-github>
+                        </div>
+                    </div>
+                  </div>
+                  <h1 class="title">Jobs</h1>
+                  <app-jobs></app-jobs>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            Site developed with Bulma css and Vue.js
+          </div>
+        </div>
+      </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-    <script src="assets/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
+  <script src="assets/js/app.js"></script>
   </body>
 </html>

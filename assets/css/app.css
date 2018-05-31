@@ -1,4 +1,6 @@
-body{
-  background:black;
-  color:white;
+html,body{
+  background: black !important;
+}
+.is-info{
+  background: black !important;
 }
