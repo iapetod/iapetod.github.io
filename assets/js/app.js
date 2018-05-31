@@ -109,8 +109,8 @@ Vue.component('app-ides',{
     template:`
     <div>
       <ul>
-        <li v-for="ide in ides">
-          {{ ide }}
+        <li v-for="ide in this.$parent.ide">
+          <a :href="ide.url">{{ ide.name }}</a>
         </li>
       </ul>
     </div>
@@ -122,11 +122,6 @@ Vue.component('app-ides',{
     },
     data:function(){
         return {
-          ides:[
-            "Android Studio",
-            "XCode",
-            "Visual Studio"
-          ],
         }
     }
 })
@@ -218,9 +213,8 @@ Vue.component('app-languages',{
     template:`
     <div>
      <span v-for="lang in languages">
-         {{ lang.name }} /
-       </span>
-     </ul>
+         {{ lang.name }}/
+     </span>
     </div>
     `,
     created:function(){
@@ -248,8 +242,8 @@ Vue.component('app-languages',{
 Vue.component('app-frameworks',{
     template:`
     <div>
-     <p v-for="lang in languages">
-         {{ lang.name }}
+     <p v-for="lang in this.$parent.frameworks">
+         <a :href="lang.url">{{ lang.name }}</a>
      </p>
     </div>
     `,
@@ -258,16 +252,9 @@ Vue.component('app-frameworks',{
     },
     methods:{
     },
-    data:function(){
-        return {
-          languages:[
-            {name:"Laravel",level:3},
-            {name:"Zend",level:3},
-            {name:"Bulma",level:3},
-            {name:"Ionic",level:3},
-            {name:"Xamarin",level:3},
-          ],
-        }
+    data(){
+      return {
+      }
     }
 })
 Vue.component('app-jobs',{
@@ -316,17 +303,17 @@ Vue.component('app-jobs',{
     data:function(){
         return {
           jobs:[
-            {name:"MaryPastel",url:"http://marypastel.com.ve",client:"",date:"2017",description:"Development Site, Shopping Cart and shopping and recipes system",tags:["Android","iOS","Laravel"]},
+            {name:"MaryPastel",url:"http://marypastel.com.ve",client:"",date:"2017",description:"Development Site, Shopping Cart and shopping and recipes system",tags:["Android","iOS","Laravel","Javascript","HTML","DomPDF"]},
             {name:"Staiger App",url:"",client:"https://play.google.com/store/apps/details?id=com.appmobile.staigerappsn",client:"Real State App",date:"2017",description:"",tags:["Android","iOS"]},
-            {name:"Maintenance System",url:"",client:"",date:"2017",description:"Sistema de mantenimiento para llevar el control de materiales y procesos",tags:["Laravel"]},
-            {name:"iDrink",url:"",client:"",date:"2015",description:"",tags:["Android"]},
-            {name:"Car simulator",url:"",client:"",date:"2014",description:"",tags:["Panda3D","Game"]},
-            {name:"Braile Printer",url:"",client:"",date:"2013",description:"",tags:["Python","C"]},
+            {name:"Maintenance System",url:"",client:"",date:"2017",description:"Maintenance system for monitoring and repair of devices",tags:["Laravel","HTML","Javascript","Vue.js","Bootstrap"]},
+            {name:"iDrink",url:"",client:"",date:"2015",description:"App for the search of local nightclubs, promotions and reservations",tags:["Android"]},
+            {name:"Car simulator",url:"",client:"",date:"2014",description:"Formula car simulator to test a set of vehicle mobility equations",tags:["Panda3D","Game"]},
+            {name:"Braile Printer",url:"",client:"",date:"2013",description:"HID driver to control a braille printer",tags:["Python","C"]},
             {name:"Extract data web",url:"",client:"",date:"2012",description:"",tags:["Python"]},
-            {name:"Electromagnetic Interferences Analyzer",url:"",client:"",date:"2012",description:"Inmobiliaria",tags:["Matlab"]},
+            {name:"Electromagnetic Interferences Analyzer",url:"",client:"",date:"2012",description:"Software for the spatial analysis of electromagnetic interferences",tags:["Matlab"]},
             {name:"Scripts",url:"",client:"",date:"2008 - 2017",description:"",tags:["Multiples languages"]},
             {name:"Wordpress templates (Backend)",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript"]},
-            {name:"Wordpress Admin Panel",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript"]},
+            {name:"Wordpress Admin Panel",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript","Wordpress"]},
           ]
         }
     }
@@ -358,7 +345,7 @@ Vue.component('app-portfolio',{
 Vue.component('app-github',{
     template:`
     <div>
-      <div v-for="project in projects">
+      <div v-for="project in projects" v-if="project.name!='iapetod.github.io'">
         <a v-bind:href="project.html_url">{{ project.name }}</a>
       </div>
     </div>
@@ -379,6 +366,21 @@ Vue.component('app-github',{
     }
 })
 
+/*const Foo = { template: '<div>foo</div>' }
+const Bar = { template: '<div>bar</div>' }
+const routes = [
+  { path: '/es', component: Foo },
+  { path: '/en', component: Bar }
+]
+
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
+
+const app = new Vue({
+  router
+}).$mount('#app')*/
+
 
 new Vue({
     el:"#app",
@@ -395,6 +397,7 @@ new Vue({
             ]
         },
         lang:{
+          native:"es",
           human:[
             "es",
             "en"
@@ -413,12 +416,14 @@ new Vue({
           ]
         },
         frameworks:[
-          "Laravel",
-          "Ionic",
-          "Xamarin",
-          "Zend",
-          "Bulma",
-          "Bootstrap"
+          {name:"Laravel",url:"https://laravel.com/",level:3},
+          {name:"Slim",url:"https://www.slimframework.com/"},
+          {name:"Ionic",url:"https://ionicframework.com/"},
+          {name:"Monaca",url:"https://monaca.io/"},
+          {name:"Xamarin",url:"https://www.xamarin.com/"},
+          {name:"Zend",url:"http://www.zend.com/"},
+          {name:"Bulma",url:"https://bulma.io/"},
+          {name:"Bootstrap",url:"https://getbootstrap.com/"}
         ],
         portfolio:{
           android:[],
@@ -426,7 +431,11 @@ new Vue({
           ios:[],
           tech:[]
         },
-        ide:["Android Studio","XCode","Visual Studio"],
+        ide:[
+          {name:"Android Studio",url:"https://developer.android.com/studio/"},
+          {name:"XCode",url:"https://developer.apple.com/xcode/"},
+          {name:"Visual Studio",url:"https://www.visualstudio.com/es/"}
+        ],
         experience:[
           {name:"Staiger App",date:"2017",description:"Inmobiliaria",tags:["Android","iOS"]}
         ],
@@ -441,7 +450,18 @@ new Vue({
         this.location();
     },
     methods:{
-        budget:function(event){
+        togglelang(){
+          if(this.lang.native=="es"){
+            this.lang.native="en"
+          }
+          else{
+            this.lang.native="es"
+          }
+        },
+        language(lang){
+          this.lang.native=lang
+        },
+        budget(event){
             if(this.request.page==0){
                 this.request.page++;
             }
@@ -455,7 +475,7 @@ new Vue({
 
             }
         },
-        location:function(){
+        location(){
             const vm = this;
             /*axios.get('http://freegeoip.net/json/').then(response =>{
                 vm.country=response.data.country_code.toLowerCase();

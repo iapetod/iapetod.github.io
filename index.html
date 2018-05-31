@@ -10,6 +10,7 @@
   </head>
   <body>
     <div id="app">
+      <div class="button" style="position:absolute;right:0px;top:0px;text-transform:uppercase" @click.prevent="togglelang()">{{ lang.native }}</div>
       <section class="section">
         <div class="container">
           <div class="columns is-gapless" style="background:silver">
@@ -50,10 +51,9 @@
                     <div class="column is-half">
                       <div class="notification is-info">
                         <p>Supported languages</p>
-
                         <h3 class="subtitle"><i class="fa fa-language"></i> Human</h3>
                         <span v-for="lang in lang.human">
-                          <i class="is-primary">{{ lang }}</i> /
+                          <a @click.prevent="language(lang)" ><i class="is-primary">{{ lang }}</i></a> /
                         </span>
                         <hr>
                         <h3 class="subtitle"><i class="fa fa-code"></i> Programming</h3>
@@ -80,7 +80,7 @@
                   <div class="columns">
                     <div class="column">
                         <div class="notification is-info">
-                          <p><i class="fa fa-github"></i> Github Account</p>
+                          <p><i class="fa fa-github"></i> Github Projects</p>
                           <app-github></app-github>
                         </div>
                     </div>
@@ -98,12 +98,13 @@
       <footer class="footer">
         <div class="container">
           <div class="content has-text-centered">
-            Site developed with Bulma css and Vue.js
+            Iapeto Studios 2018
           </div>
         </div>
       </footer>
     </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
   <script src="assets/js/app.js"></script>
   </body>
