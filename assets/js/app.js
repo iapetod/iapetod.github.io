@@ -10,5 +10,11 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!'
+  },
+  mounted(){
+    alert("Hola")
+  },
+  created(){
+    alert("Hello")
   }
 })
