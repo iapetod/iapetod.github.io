@@ -188,12 +188,12 @@ Vue.component('app-knowledge',{
               {name:"JSON",level:9},
               {name:"HTML5",level:9},
               {name:"Javascript",level:9},
-              {name:"PHP",level:8},
+              {name:"PHP",level:9},
               {name:"Python",level:6},
               {name:"Node.js",level:6},
               {name:"Apache",level:7},
               {name:"MongoDB",level:5},
-              {name:"Laravel",level:7},
+              {name:"Laravel",level:8},
               {name:"Wordpress",level:9},
               {name:"Woocommerce",level:9},
               {name:"Linux",level:9},
@@ -304,6 +304,8 @@ Vue.component('app-jobs',{
     data:function(){
         return {
           jobs:[
+            {name:"ArdentPeak",url:"http://ardentpeak.com",client:"",date:"2018 - 2019",description:"Bug Corrections in Apps and Sites",tags:["Android","Wordpress","PHP","Laravel","Javascript","HTML","DomPDF"]},
+            {name:"Feroz Digital",url:"http://ferozdigital.cl",client:"",date:"2019",description:"Freelancer Jobs",tags:["Wordpress","Woocommerce","PHP","HTML","DomPDF"]},
             {name:"MaryPastel",url:"http://marypastel.com.ve",client:"",date:"2017",description:"Development Site, Shopping Cart and shopping and recipes system",tags:["Android","iOS","Laravel","Javascript","HTML","DomPDF"]},
             {name:"Staiger App",url:"",client:"https://play.google.com/store/apps/details?id=com.appmobile.staigerappsn",client:"Real State App",date:"2017",description:"",tags:["Android","iOS"]},
             {name:"Maintenance System",url:"",client:"",date:"2017",description:"Maintenance system for monitoring and repair of devices",tags:["Laravel","HTML","Javascript","Vue.js","Bootstrap"]},
