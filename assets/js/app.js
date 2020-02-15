@@ -434,6 +434,7 @@ new Vue({
           {name:"Angular",url:"https://angular.io/"},
           {name:"Vue",url:"https://vuejs.org/"},
           {name:"ReactJS",url:"https://es.reactjs.org/"},
+          {name:"Redux",url:"https://es.redux.js.org/"},
           {name:"ElectronJS",url:"https://www.electronjs.org/"},
           {name:"Ionic",url:"https://ionicframework.com/"},
           {name:"React Native",url:"https://facebook.github.io/react-native/"},
