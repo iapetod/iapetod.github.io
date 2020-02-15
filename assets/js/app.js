@@ -99,8 +99,8 @@ Vue.component('app-experience',{
     data:function(){
         return {
           experiences:[
-            {name:"Programador de sistemas",company:"Universidad del Zulia",date:"",years:"6",projects:"5"},
-            {name:"Freelancer",company:"",years:"12",projects:"6"},
+            {name:"Programador de sistemas",company:"Universidad del Zulia",date:"",years:"8",projects:"5"},
+            {name:"Freelancer",company:"",years:"12",projects:"9"},
           ],
         }
     }
@@ -150,6 +150,7 @@ Vue.component('app-demos',{
           demos:[
             {name:"Android Native",url:"https://iapeto.com/downloads/demo/android"},
             {name:"iOS Native",url:"https://iapeto.com/downloads/demo/ios"},
+            {name:"Flutter",url:"https://iapeto.com/downloads/demo/ios"},
             {name:"Hybrid App",url:"https://iapeto.com/downloads/demo/ionic"},
             {name:"Dashboard Web",url:"https://iapeto.com/downloads/demo/web"},
             {name:"Template Wordpress",url:"https://iapeto.com/downloads/demo/wordpress"}
@@ -184,10 +185,13 @@ Vue.component('app-knowledge',{
     data:function(){
         return {
           knowledges:[
-              {name:"Android",level:5},
+              {name:"Android",level:8},
               {name:"JSON",level:9},
               {name:"HTML5",level:9},
               {name:"Javascript",level:9},
+              {name:"Angular",level:8},
+              {name:"Vue",level:7},
+              {name:"React",level:7},
               {name:"PHP",level:9},
               {name:"Python",level:6},
               {name:"Node.js",level:6},
@@ -200,9 +204,11 @@ Vue.component('app-knowledge',{
               {name:"Arduino",level:8},
               {name:"jQuery",level:9},
               {name:"XML",level:6},
-              {name:"Github",level:4},
-              {name:"MySQL",level:6},
-              {name:"Google API",level:5},
+              {name:"Github",level:8},
+              {name:"MySQL",level:7},
+              {name:"PostgreSQL",level:7},
+              {name:"Firebase",level:8},
+              {name:"Google API",level:7},
               {name:"Phaser.js",level:7},
               {name:"Unity",level:3},
               {name:"Moodle",level:4},
@@ -230,6 +236,7 @@ Vue.component('app-languages',{
             {name:"JSON",level:3},
             {name:"HTML5",level:3},
             {name:"Javascript",level:3},
+            {name:"Typescript",level:3},
             {name:"PHP",level:3},
             {name:"C++",level:3},
             {name:"Python",level:3},
@@ -304,6 +311,8 @@ Vue.component('app-jobs',{
     data:function(){
         return {
           jobs:[
+            {name:"Freelancer.com",url:"http://ferozdigital.cl",client:"",date:"2019",description:"Freelancer Jobs",tags:["Wordpress","Woocommerce","PHP","HTML","Django","ReactJS","Angular"]},
+            {name:"BCM Ingenieria",url:"",client:"",date:"2019",description:"ISO 9001 Software",tags:["Django","Angular","Celery","Websock","Realtime"]},
             {name:"ArdentPeak",url:"http://ardentpeak.com",client:"",date:"2018 - 2019",description:"Bug Corrections in Apps and Sites",tags:["Android","Wordpress","PHP","Laravel","Javascript","HTML","DomPDF"]},
             {name:"Feroz Digital",url:"http://ferozdigital.cl",client:"",date:"2019",description:"Freelancer Jobs",tags:["Wordpress","Woocommerce","PHP","HTML","DomPDF"]},
             {name:"MaryPastel",url:"http://marypastel.com.ve",client:"",date:"2017",description:"Development Site, Shopping Cart and shopping and recipes system",tags:["Android","iOS","Laravel","Javascript","HTML","DomPDF"]},
@@ -419,8 +428,13 @@ new Vue({
           ]
         },
         frameworks:[
-          {name:"Laravel",url:"https://laravel.com/",level:3},
+          {name:"Laravel",url:"https://laravel.com/"},
+          {name:"Django",url:"https://www.djangoproject.com/"},
           {name:"Slim",url:"https://www.slimframework.com/"},
+          {name:"Angular",url:"https://angular.io/"},
+          {name:"Vue",url:"https://vuejs.org/"},
+          {name:"ReactJS",url:"https://es.reactjs.org/"},
+          {name:"ElectronJS",url:"https://www.electronjs.org/"},
           {name:"Ionic",url:"https://ionicframework.com/"},
           {name:"React Native",url:"https://facebook.github.io/react-native/"},
           {name:"Monaca",url:"https://monaca.io/"},
