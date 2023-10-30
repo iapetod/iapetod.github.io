@@ -15,7 +15,7 @@ html,body{
 .skill-item{
   font-size:60px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .skill-item{
     font-size:10px;
   }
