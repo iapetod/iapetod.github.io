@@ -100,7 +100,7 @@ Vue.component('app-experience',{
         return {
           experiences:[
             {name:"Programador de sistemas",company:"Universidad del Zulia",date:"",years:"8",projects:"5"},
-            {name:"Freelancer",company:"",years:"12",projects:"9"},
+            {name:"Programador",company:"",years:"17",projects:"+20"},
           ],
         }
     }
@@ -186,15 +186,15 @@ Vue.component('app-knowledge',{
         return {
           knowledges:[
               {name:"Android",level:8},
-              {name:"JSON",level:9},
-              {name:"HTML5",level:9},
+              {name:"JSON",level:10},
+              {name:"HTML5",level:10},
               {name:"Javascript",level:9},
-              {name:"Angular",level:8},
+              {name:"Angular",level:10},
               {name:"Vue",level:7},
-              {name:"React",level:7},
+              {name:"React",level:9},
               {name:"PHP",level:9},
               {name:"Python",level:6},
-              {name:"Node.js",level:6},
+              {name:"Node.js",level:9},
               {name:"Apache",level:7},
               {name:"MongoDB",level:5},
               {name:"Laravel",level:8},
@@ -204,14 +204,15 @@ Vue.component('app-knowledge',{
               {name:"Arduino",level:8},
               {name:"jQuery",level:9},
               {name:"XML",level:6},
-              {name:"Github",level:8},
+              {name:"Github",level:10},
               {name:"MySQL",level:7},
-              {name:"PostgreSQL",level:7},
+              {name:"PostgreSQL",level:9},
               {name:"Firebase",level:8},
               {name:"Google API",level:7},
               {name:"Phaser.js",level:7},
               {name:"Unity",level:3},
               {name:"Moodle",level:4},
+              {name:"Flutter",level:10},
           ],
         }
     }
@@ -243,6 +244,7 @@ Vue.component('app-languages',{
             {name:"XML",level:3},
             {name:"SQL",level:3},
             {name:"C#",level:3},
+            {name:"Dart",level:10},
           ],
         }
     }
@@ -326,6 +328,7 @@ Vue.component('app-jobs',{
             {name:"Scripts",url:"",client:"",date:"2008 - 2017",description:"",tags:["Multiples languages"]},
             {name:"Wordpress templates (Backend)",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript"]},
             {name:"Wordpress Admin Panel",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript","Wordpress"]},
+            {name:"Proyectos varios",url:"",client:"",date:"2017 - 2023",description:"",tags:["PHP","HTML5","Javascript","Wordpress","Dart","Nodejs","React","Angular","..."]},
           ]
         }
     }
@@ -425,6 +428,7 @@ new Vue({
             "C++",
             "C#",
             "C",
+            "Dart",
           ]
         },
         frameworks:[
@@ -442,7 +446,8 @@ new Vue({
           {name:"Xamarin",url:"https://www.xamarin.com/"},
           {name:"Zend",url:"http://www.zend.com/"},
           {name:"Bulma",url:"https://bulma.io/"},
-          {name:"Bootstrap",url:"https://getbootstrap.com/"}
+          {name:"Bootstrap",url:"https://getbootstrap.com/"},
+          {name:"Flutter",url:"https://flutter.dev"}
         ],
         portfolio:{
           android:[],
