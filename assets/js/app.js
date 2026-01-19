@@ -75,7 +75,9 @@ Vue.component('app-skills',{
             {name:"Phaser.js",icon:"assets/img/phaserjs.png"},
             {name:"C#",icon:"assets/img/csharp.png"},
             {name:"Unity",icon:"assets/img/unity.png"},
-            {name:"Moodle",icon:"assets/img/moodle.png"}
+            {name:"Moodle",icon:"assets/img/moodle.png"},
+            {name:".NET Core",icon:"assets/img/dotnetcore.png"},
+            {name:"Postgres",icon:"assets/img/postgres.png"}
           ],
         }
     }
@@ -86,7 +88,7 @@ Vue.component('app-experience',{
       <ul>
         <li v-for="experience in experiences">
           <h1 class="title is-5">{{ experience.name }}</h1>
-          <h2 class="subtitle is-6"> <span v-if="experience.company!=''">{{ experience.company }} - </span>{{ experience.years }} años</h2>
+          <h2 class="subtitle is-6"> <span v-if="experience.company!=''">{{ experience.company }} - </span>{{ experience.years }} years</h2>
         </li>
       </ul>
     </div>
@@ -99,8 +101,9 @@ Vue.component('app-experience',{
     data:function(){
         return {
           experiences:[
-            {name:"Programador de sistemas",company:"Universidad del Zulia",date:"",years:"8",projects:"5"},
-            {name:"Programador",company:"",years:"17",projects:"+20"},
+            {name:"Software Developer",company:"Universidad del Zulia",date:"",years:"9",projects:"5"},
+            {name:"Consulting Senior Developer",company:"Kontacto",years:"4",projects:"3"},
+            {name:"Senior Developer",company:"Prisma Soluciones",years:"7",projects:"+20"},
           ],
         }
     }
@@ -168,9 +171,6 @@ Vue.component('app-knowledge',{
           <div style="font-size:10px">{{ knowledge.level }}/10</div>
           </div>
           <div class="column">
-            <span v-for="lev in knowledge.level" class="skill-item">
-             <i class="fa fa-square-o"></i>
-            </span>
           </div>
          </div>
        </li>
@@ -192,6 +192,7 @@ Vue.component('app-knowledge',{
               {name:"Angular",level:10},
               {name:"Vue",level:7},
               {name:"React",level:9},
+              {name:"C#",level:8},
               {name:"PHP",level:9},
               {name:"Python",level:6},
               {name:"Node.js",level:9},
@@ -329,6 +330,12 @@ Vue.component('app-jobs',{
             {name:"Wordpress templates (Backend)",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript"]},
             {name:"Wordpress Admin Panel",url:"",client:"",date:"2008 - 2017",description:"",tags:["PHP","HTML5","Javascript","Wordpress"]},
             {name:"Proyectos varios",url:"",client:"",date:"2017 - 2023",description:"",tags:["PHP","HTML5","Javascript","Wordpress","Dart","Nodejs","React","Angular","..."]},
+            {name:"APIs in multiple languages",url:"",client:"",date:"2018 - 2024",description:"Design and integration of REST APIs and microservices using multiple languages and frameworks (Node.js, Python, PHP, .NET Core). Projects include API design, OpenAPI documentation and containerized deployments.",tags:["API","REST","Microservices","Node.js","Python","PHP",".NET Core","Postgres"]},
+            {name:"Billing API (.NET Core)",url:"",client:"Company X",date:"2021 - 2022",description:"Implemented a billing and payment management API using .NET Core, Entity Framework Core and PostgreSQL. Features included JWT authentication and unit testing.",tags:["C#",".NET Core","PostgreSQL","EF Core","REST"]},
+            {name:"Authentication Service (.NET Core)",url:"",client:"Project Y",date:"2022 - 2023",description:"Authentication and authorization service built with .NET Core, integrated with OAuth2 and PostgreSQL. Scaled and deployed using Docker containers.",tags:["C#",".NET Core","OAuth2","Postgres","Docker"]},
+            {name:"Node.js & Angular Projects",url:"",client:"",date:"2023 - 2025",description:"Full-stack development of applications using Node.js for backend and Angular for frontend: REST APIs, real-time features, and CI/CD pipelines.",tags:["Node.js","Angular","TypeScript","REST","Docker"]},
+            {name:"E-commerce Platform (Node.js + Angular)",url:"",client:"Client Z",date:"2023 - 2024",description:"Built a scalable e-commerce platform with a Node.js backend, Angular SPA frontend, PostgreSQL database and payment integration.",tags:["Node.js","Angular","PostgreSQL","Payments","Docker"]},
+            {name:"Internal Dashboard (Node.js + Angular)",url:"",client:"Client W",date:"2024 - 2025",description:"Admin dashboard for analytics and monitoring with real-time updates via WebSockets and role-based access control.",tags:["Node.js","Angular","WebSocket","RBAC","Docker"]},
           ]
         }
     }
@@ -403,8 +410,9 @@ new Vue({
         header:{
             name:"Jesus Marcano",
             country:"Venezuela",
-            developer:["Android","iOS","Web","Desktop"],
+            developer:["Backend","Android","iOS","Web","Desktop"],
             jobs:[
+              "Full Stack Developer",
               "Hybrid System Developer",
               "Android Developer",
               "iOS Developer",
